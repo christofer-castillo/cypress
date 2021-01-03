@@ -100,7 +100,7 @@ describe('Cy.Request() Part Two', () => {
             }
         }).then(response => {
             expect(response.body.data[0]).to.include({
-                email: 'fakeEmail@gmail.com'
+                email: newUserData.email
             });
         });
     });
