@@ -1,0 +1,193 @@
+{
+  "code": 200,
+  "meta": {
+    "pagination": {
+      "total": 1390,
+      "pages": 70,
+      "page": 1,
+      "limit": 20
+    }
+  },
+  "data": [
+    {
+      "id": 1,
+      "name": "Balamani ",
+      "email": "balamani_iyengar@bauch-green.info",
+      "gender": "Male",
+      "status": "Inactive",
+      "created_at": "2021-01-09T03:50:04.169+05:30",
+      "updated_at": "2021-01-09T21:25:22.002+05:30"
+    },
+    {
+      "id": 2,
+      "name": "Patricia",
+      "email": "patricia1234@gmail.com",
+      "gender": "Female",
+      "status": "Active",
+      "created_at": "2021-01-09T03:50:04.197+05:30",
+      "updated_at": "2021-01-09T18:33:01.930+05:30"
+    },
+    {
+      "id": 4,
+      "name": "Rep. Bishnu Pandey",
+      "email": "pandey_rep_bishnu@carter.com",
+      "gender": "Female",
+      "status": "Inactive",
+      "created_at": "2021-01-09T03:50:04.249+05:30",
+      "updated_at": "2021-01-09T03:50:04.249+05:30"
+    },
+    {
+      "id": 5,
+      "name": "The Hon. Chaaruchandra Achari",
+      "email": "achari_chaaruchandra_hon_the@lemke.org",
+      "gender": "Female",
+      "status": "Inactive",
+      "created_at": "2021-01-09T03:50:04.255+05:30",
+      "updated_at": "2021-01-09T03:50:04.255+05:30"
+    },
+    {
+      "id": 6,
+      "name": "Kumuda Adiga",
+      "email": "kumuda_adiga@hackett.io",
+      "gender": "Male",
+      "status": "Active",
+      "created_at": "2021-01-09T03:50:04.259+05:30",
+      "updated_at": "2021-01-09T03:50:04.259+05:30"
+    },
+    {
+      "id": 7,
+      "name": "Keerti Bhat",
+      "email": "bhat_keerti@wolff-beier.name",
+      "gender": "Male",
+      "status": "Inactive",
+      "created_at": "2021-01-09T03:50:04.269+05:30",
+      "updated_at": "2021-01-09T03:50:04.269+05:30"
+    },
+    {
+      "id": 8,
+      "name": "Ivan Ivanov8put",
+      "email": "unlike51298put@oil.com",
+      "gender": "Male",
+      "status": "Active",
+      "created_at": "2021-01-09T03:50:04.282+05:30",
+      "updated_at": "2021-01-10T02:36:48.270+05:30"
+    },
+    {
+      "id": 9,
+      "name": "Anand Swarup Banerjee IV",
+      "email": "banerjee_iv_anand_swarup@hackett.com",
+      "gender": "Male",
+      "status": "Active",
+      "created_at": "2021-01-09T03:50:04.306+05:30",
+      "updated_at": "2021-01-09T03:50:04.306+05:30"
+    },
+    {
+      "id": 11,
+      "name": "Vishnu Pandey",
+      "email": "vishnu_pandey@monahan.net",
+      "gender": "Male",
+      "status": "Inactive",
+      "created_at": "2021-01-09T03:50:04.352+05:30",
+      "updated_at": "2021-01-09T03:50:04.352+05:30"
+    },
+    {
+      "id": 12,
+      "name": "Bhisham Bhattacharya",
+      "email": "bhattacharya_bhisham@stark.biz",
+      "gender": "Male",
+      "status": "Inactive",
+      "created_at": "2021-01-09T03:50:04.373+05:30",
+      "updated_at": "2021-01-09T03:50:04.373+05:30"
+    },
+    {
+      "id": 13,
+      "name": "Damayanti Gowda",
+      "email": "gowda_damayanti@mertz.io",
+      "gender": "Male",
+      "status": "Active",
+      "created_at": "2021-01-09T03:50:04.387+05:30",
+      "updated_at": "2021-01-09T06:17:15.230+05:30"
+    },
+    {
+      "id": 14,
+      "name": "Sher Varman",
+      "email": "sher_varman@schuster.io",
+      "gender": "Female",
+      "status": "Active",
+      "created_at": "2021-01-09T03:50:04.419+05:30",
+      "updated_at": "2021-01-09T03:50:04.419+05:30"
+    },
+    {
+      "id": 15,
+      "name": "Anasuya Gill",
+      "email": "gill_anasuya@fay.name",
+      "gender": "Male",
+      "status": "Inactive",
+      "created_at": "2021-01-09T03:50:04.442+05:30",
+      "updated_at": "2021-01-09T03:50:04.442+05:30"
+    },
+    {
+      "id": 16,
+      "name": "Shashi Gandhi",
+      "email": "shashi_gandhi@grady-mcdermott.co",
+      "gender": "Female",
+      "status": "Active",
+      "created_at": "2021-01-09T03:50:04.479+05:30",
+      "updated_at": "2021-01-09T03:50:04.479+05:30"
+    },
+    {
+      "id": 17,
+      "name": "Sujata Kaniyar IV",
+      "email": "sujata_iv_kaniyar@morar.co",
+      "gender": "Male",
+      "status": "Inactive",
+      "created_at": "2021-01-09T03:50:04.492+05:30",
+      "updated_at": "2021-01-09T03:50:04.492+05:30"
+    },
+    {
+      "id": 18,
+      "name": "Tanirika Jha",
+      "email": "jha_tanirika@hahn-conroy.biz",
+      "gender": "Female",
+      "status": "Active",
+      "created_at": "2021-01-09T03:50:04.511+05:30",
+      "updated_at": "2021-01-09T03:50:04.511+05:30"
+    },
+    {
+      "id": 19,
+      "name": "Chandrakala",
+      "email": "chandrakala_dhawan@hackett.name",
+      "gender": "Male",
+      "status": "Inactive",
+      "created_at": "2021-01-09T03:50:04.536+05:30",
+      "updated_at": "2021-01-09T21:38:07.808+05:30"
+    },
+    {
+      "id": 20,
+      "name": "Durga Ahuja",
+      "email": "durga_ahuja@berge.co",
+      "gender": "Female",
+      "status": "Inactive",
+      "created_at": "2021-01-09T03:50:04.573+05:30",
+      "updated_at": "2021-01-09T03:50:04.573+05:30"
+    },
+    {
+      "id": 21,
+      "name": "raju",
+      "email": "khan_elakshi@conroy.io",
+      "gender": "Male",
+      "status": "Inactive",
+      "created_at": "2021-01-09T03:50:04.579+05:30",
+      "updated_at": "2021-01-09T20:00:21.057+05:30"
+    },
+    {
+      "id": 23,
+      "name": "Lal Nair",
+      "email": "lal_nair@reinger-kub.org",
+      "gender": "Male",
+      "status": "Active",
+      "created_at": "2021-01-09T03:50:04.622+05:30",
+      "updated_at": "2021-01-09T03:50:04.622+05:30"
+    }
+  ]
+}
