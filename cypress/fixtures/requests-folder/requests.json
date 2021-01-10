@@ -1,0 +1,22 @@
+{
+    "code": 200,
+    "meta": {
+      "pagination": {
+        "total": 1499,
+        "pages": 75,
+        "page": 1,
+        "limit": 20
+      }
+    },
+    "data": [
+      {
+        "id": 6,
+        "name": "Rev. Anand Swarup Prajapat",
+        "email": "rev_anand_prajapat_swarup@kris.org",
+        "gender": "Female",
+        "status": "Active",
+        "created_at": "2021-01-05T03:50:03.616+05:30",
+        "updated_at": "2021-01-05T03:50:03.616+05:30"
+      }
+    ]
+}
