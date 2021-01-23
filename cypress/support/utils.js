@@ -2,14 +2,14 @@
 export const access_token = '';
 
 export const newUserData = {
-    email: 'fakeEmail10@gmail.com',
+    email: 'fakeEmail14@gmail.com',
     name: 'Billy Bob',
     gender: 'Male',
     status: 'Active'
 }
 
 export const stringifiedNewUserData = `{
-    email: 'fakeEmail11@gmail.com',
+    email: 'fakeEmail12@gmail.com',
     name: 'Billy Bob',
     gender: 'Male',
     status: 'Active'
