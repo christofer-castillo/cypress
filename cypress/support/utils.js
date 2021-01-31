@@ -9,7 +9,7 @@ export const newUserData = {
 }
 
 export const stringifiedNewUserData = `{
-    email: 'fakeEmail12@gmail.com',
+    email: 'fakeEmail48@gmail.com',
     name: 'Billy Bob',
     gender: 'Male',
     status: 'Active'
