@@ -218,3 +218,16 @@ describe('Actual RouteHandler examples', () => {
         });
     });
 });
+
+describe('GraphQL Intercept', () => {
+    it('should display the best way to intercept GraphQL', () => {
+        cy.intercept('POST', 'insertURL', req => {
+            const {
+                operationName
+            } = JSON.parse(req.body);
+            req.alias = operationName;
+        });
+
+        cy.interceptGraphQl('operationName');
+    });
+});
