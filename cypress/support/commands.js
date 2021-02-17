@@ -35,3 +35,17 @@ Cypress.Commands.add('interceptGraphQl', opName => {
         }
     });
 });
+
+Cypress.Commands.add('requestGraphQl', operationName => {
+    cy.request({
+        url: '/',
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: {
+            query: operationName
+        },
+        failOnStatusCode: false
+    });
+});
