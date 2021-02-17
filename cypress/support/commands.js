@@ -23,3 +23,29 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
+
+Cypress.Commands.add('interceptGraphQl', opName => {
+    cy.intercept('POST', 'insertURL', req => {
+        const {
+            operationName
+        } = JSON.parse(req.body);
+        if (operationName === opName) {
+            console.log(operationName);
+            req.alias = opName;
+        }
+    });
+});
+
+Cypress.Commands.add('requestGraphQl', operationName => {
+    cy.request({
+        url: '/',
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: {
+            query: operationName
+        },
+        failOnStatusCode: false
+    });
+});
