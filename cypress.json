@@ -1,3 +1,7 @@
 {
-    "baseUrl": "https://countries.trevorblades.com/"
+    "baseUrl": "https://countries.trevorblades.com/",
+    "env": {
+        "email": "randomemail2021@gmail.com",
+        "password": "Password"
+    }
 }
