@@ -78,3 +78,22 @@ Cypress.Commands.add('getAndSetToken', () => {
         localStorage.setItem('jwt', token);
     });
 });
+
+Cypress.Commands.add('seedLocalStorage', (key, value) => {
+    // Cypress.log takes an 'options' object
+    Cypress.log({
+        // $el: jQuery element for the command if it exists
+        name: 'seedLocalStorage',
+        displayName: 'seedLs',
+        message: `key: ${key}, value: ${value}`,
+        consoleProps: () => {
+            return {
+                'Key': key,
+                'Value': value,
+                'Local Storage': window.localStorage
+            }
+        }
+    });
+
+    localStorage.setItem(key, value);
+});
