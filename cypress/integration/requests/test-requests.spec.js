@@ -6,7 +6,9 @@ import {
 
 // https://gorest.co.in/
 
-describe('Cy.Request() Part Two', () => {
+describe('Cy.Request() Part Two', {
+    baseUrl: 'https://gorest.co.in/public-api'
+}, () => {
     let userId;
 
     it('Should create a user -- auth in header', () => {
