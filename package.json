@@ -3,7 +3,7 @@
     "cypress": "^6.1.0"
   },
   "scripts": {
-    "cypress:open": "cypress open",
+    "open": "cypress open",
     "cypress:run": "cypress run"
   }
 }
