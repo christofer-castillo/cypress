@@ -5,7 +5,12 @@ declare namespace Cypress {
        * @param key 
        * @param value 
        */
-      seedLocalStorage(key: string, value: string): Chainable<void>;
+      seedLocalStorage(key: string, value: string): Chainable;
+      /**
+       * @param value string attached to data-cy = ''
+       * @example cy.getDataTag('selector')
+       */
+      getDataTag(value: string): Chainable<Element>;
       interceptGraphQl(opName: string): Chainable;
       getAndSetToken(): VoidFunction;
       saveLocalStorage(): Chainable;

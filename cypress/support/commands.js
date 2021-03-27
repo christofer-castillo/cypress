@@ -97,3 +97,7 @@ Cypress.Commands.add('seedLocalStorage', (key, value) => {
 
     localStorage.setItem(key, value);
 });
+
+Cypress.Commands.add('getDataTag', value => {
+    return cy.get(`[data-cy=${value}]`);
+});
