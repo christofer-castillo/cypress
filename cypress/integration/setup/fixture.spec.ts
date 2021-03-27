@@ -59,7 +59,7 @@ describe('All things Fixtures', () => {
         });
 
         cy.fixture('empty.json').then(response => {
-            expect(response.data[0].id).to.be.equal(1);
+            expect(response.data[0].id).to.be.a('number');
         });
     });
 
@@ -99,7 +99,8 @@ describe('Fixtures and closure variables', () => {
     });
 });
 
-import testData from '../../fixtures/test-data.json';
+// @ts-ignore
+import * as testData from '../../fixtures/test-data.json';
 describe('Fixtures and imports', () => {
     before(() => cy.visit('https://gorest.co.in/rest-console'));
 
@@ -111,7 +112,7 @@ describe('Fixtures and imports', () => {
     });
 });
 
-describe.only('Fixtures and declaring aliases', () => {
+describe('Fixtures and declaring aliases', () => {
     // load the fixture before hitting the tests
     before(() => {
         cy.fixture('request').as('yes');

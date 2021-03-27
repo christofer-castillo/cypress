@@ -69,6 +69,7 @@ describe('Return Values', {
         // do stuff with other test code, get some coffee, then come back the request below
 
         cy.get('@comments').should((response) => {
+            // @ts-ignore
             if (response.status === 200) {
                 expect(response).to.have.property('duration')
                 console.log(response);

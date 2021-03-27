@@ -30,7 +30,7 @@ describe('URL argument Examples', () => {
     });
 });
 
-describe.only('routeMatcher Examples', () => {
+describe('routeMatcher Examples', () => {
     beforeEach(() => cy.visit(url));
 
     it('should intercept the route with matching headers', () => {

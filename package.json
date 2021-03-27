@@ -5,5 +5,8 @@
   "scripts": {
     "open": "cypress open",
     "cypress:run": "cypress run"
+  },
+  "devDependencies": {
+    "typescript": "^4.2.3"
   }
 }
