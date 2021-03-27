@@ -7,6 +7,7 @@ describe('Command Logging', () => {
 
         cy.visit('https://example.cypress.io/commands/actions');
 
+        // @ts-ignore
         cy.log('Cypress information', window.Cypress);
     });
 
@@ -17,6 +18,7 @@ describe('Command Logging', () => {
             cy.log(localStorage.getItem('Las Vegas'));
         });
         cy.log(localStorage.getItem('Las Vegas'));
+        // @ts-ignore
         cy.log(Math.floor(Math.random() * 10));
     });
 });

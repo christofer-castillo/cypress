@@ -8,7 +8,9 @@ import {
 
 // https://gorest.co.in/
 
-describe('Using api header command', () => {
+describe('Using api header command', {
+    baseUrl: 'https://gorest.co.in/public-api'
+}, () => {
     let userId;
 
     it('Should create a user -- auth in header', () => {
