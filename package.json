@@ -1,6 +1,8 @@
 {
+  "license": "MIT",
   "dependencies": {
-    "cypress": "^6.1.0"
+    "cypress": "^6.1.0",
+    "http-server": "^0.12.3"
   },
   "scripts": {
     "open": "cypress open",

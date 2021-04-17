@@ -18,3 +18,9 @@ import './commands'
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
+
+
+//Cypress.Cookies.debug(true);
+Cypress.Cookies.debug(true, {
+    verbose: false
+});
