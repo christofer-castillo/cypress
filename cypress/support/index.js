@@ -21,6 +21,4 @@ import './commands'
 
 
 //Cypress.Cookies.debug(true);
-Cypress.Cookies.debug(true, {
-    verbose: false
-});
+Cypress.Cookies.debug(true);

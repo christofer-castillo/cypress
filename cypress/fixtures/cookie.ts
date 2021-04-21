@@ -1,0 +1,1 @@
+export const cookie = { name: 'Chris Castillo', value: '123456'};
