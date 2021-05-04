@@ -2,5 +2,6 @@
     "env": {
         "email": "randomemail2021@gmail.com",
         "password": "Password"
-    }
+    },
+    "video": false
 }
