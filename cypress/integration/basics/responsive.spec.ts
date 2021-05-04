@@ -21,7 +21,7 @@ context('Cypress Viewport Options', () => {
         });
     });
 
-    describe('Responsive testing via cy.viewport() presets', () => {
+    describe('Viewport presets', () => {
 
         it('should set the viewport size', () => {
             cy.viewport('iphone-x');
@@ -39,6 +39,17 @@ context('Cypress Viewport Options', () => {
 
         it('should set the viewport size with a preset and orientation', () => {
             cy.viewport('ipad-mini', 'landscape'); // default will be portrait
+
+            cy.get('#main-q').type('responsive design{enter}');
+        });
+    });
+
+    describe('Test Configuration', {
+        viewportHeight: 400,
+        viewportWidth: 400
+    }, () => {
+        it('should search for responsive design', () => {
+            cy.get('.main-menu-toggle').click();
 
             cy.get('#main-q').type('responsive design{enter}');
         });
