@@ -11,3 +11,17 @@ document.querySelector('#clicked').addEventListener('click', () => {
         document.cookie = cookieGenerator('Kansas City', 'Chiefs');
     }
 });
+
+function showTypedCharacter(e) {
+    alert(`Key pressed: ${e.key} \n CTRL key pressed: ${e.ctrlKey}.`);
+}
+
+document.querySelector('#key-combo').addEventListener('keypress', showTypedCharacter);
+
+document.body.addEventListener('keydown', (e) => {
+    if (e.code === '40') {
+        alert('something happened');
+    } else {
+        alert(`Something, ${e.code}`);
+    }
+});

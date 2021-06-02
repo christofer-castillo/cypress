@@ -6,7 +6,8 @@
   },
   "scripts": {
     "open": "cypress open",
-    "cypress:run": "cypress run"
+    "cypress:run": "cypress run",
+    "server": "http-server"
   },
   "devDependencies": {
     "typescript": "^4.2.3"

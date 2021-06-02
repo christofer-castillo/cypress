@@ -9,3 +9,8 @@ h1 {
 button {
     cursor: pointer;
 }
+
+.container {
+    margin-left: 20px;
+    margin-bottom: 30px;
+}

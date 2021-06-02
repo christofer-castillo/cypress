@@ -3,5 +3,7 @@
         "email": "randomemail2021@gmail.com",
         "password": "Password"
     },
-    "video": false
+    "video": false,
+    "viewportHeight": 1980,
+    "viewportWidth": 1080
 }
