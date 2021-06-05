@@ -11,3 +11,7 @@ document.querySelector('#clicked').addEventListener('click', () => {
         document.cookie = cookieGenerator('Kansas City', 'Chiefs');
     }
 });
+
+document.body.addEventListener('keydown', e => {
+    alert(`Key Pressed: ${e.key}`);
+});
