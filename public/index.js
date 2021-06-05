@@ -12,16 +12,6 @@ document.querySelector('#clicked').addEventListener('click', () => {
     }
 });
 
-function showTypedCharacter(e) {
-    alert(`Key pressed: ${e.key} \n CTRL key pressed: ${e.ctrlKey}.`);
-}
-
-document.querySelector('#key-combo').addEventListener('keypress', showTypedCharacter);
-
-document.body.addEventListener('keydown', (e) => {
-    if (e.code === '40') {
-        alert('something happened');
-    } else {
-        alert(`Something, ${e.code}`);
-    }
+document.body.addEventListener('keydown', e => {
+    alert(`Key Pressed: ${e.key}`);
 });

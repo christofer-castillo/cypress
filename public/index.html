@@ -5,15 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Five Minutes of HTML</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="/styles.css">
 </head>
 <body>
     <h1>Cypress Cookies</h1>
     <button id="clicked">
         Click to generate cookies
     </button>
+    <h2>Various Inputs</h2>
     <section>
-        <h2>Inputs of the day</h2>
         <div class="container">
             <label for="normal-text">Normal Text Input</label>
             <input type="text" name="normal-text" id="normal-text">
@@ -27,6 +27,14 @@
             <input type="date" name="date" id="date">
         </div>
         <div class="container">
+            <label for="month">Month Input</label>
+            <input type="month" name="month" id="month">
+        </div>
+        <div class="container">
+            <label for="week">Week Input</label>
+            <input type="week" name="week" id="week">
+        </div>
+        <div class="container">
             <label for="time">Time Input</label>
             <input type="time" name="time" id="time">
         </div>
@@ -34,7 +42,10 @@
             <label for="textarea">Textarea Input</label>
             <textarea name="textarea" id="textarea" cols="30" rows="10"></textarea>
         </div>
+        <div class="container">
+            <div contenteditable="true" style="width: 250px;">Something something dark side</div>
+        </div>
     </section>
-    <script src="index.js"></script>
+    <script src="/index.js"></script>
 </body>
 </html>

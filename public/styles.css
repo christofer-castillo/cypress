@@ -6,8 +6,28 @@ h1 {
     font-size: 4rem;
 }
 
+h2 {
+    text-align: center;
+    font-size: 3rem;
+}
+
+section {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
 button {
     cursor: pointer;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input {
+    border-radius: 5px;
 }
 
 .container {
