@@ -101,3 +101,33 @@ Cypress.Commands.add('seedLocalStorage', (key, value) => {
 Cypress.Commands.add('getDataTag', value => {
     return cy.get(`[data-cy=${value}]`);
 });
+
+Cypress.Commands.add('customFormCommand', ({
+    firstName,
+    lastName,
+    email,
+    number,
+    subject
+}) => {
+    // First Name
+    cy.getDataTag('first-name')
+        .clear()
+        .type(firstName);
+    // Last Name
+    cy.getDataTag('last-name')
+        .clear()
+        .type(lastName);
+    // Email
+    cy.getDataTag('email')
+        .clear()
+        .type(email);
+    // Number
+    cy.getDataTag('number')
+        .clear()
+        // @ts-ignore
+        .type(number);
+    // Subject
+    cy.getDataTag('subject-area')
+        .clear()
+        .type(subject);
+});
