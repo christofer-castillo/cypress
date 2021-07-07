@@ -17,5 +17,10 @@ declare namespace Cypress {
       restoreLocalStorage(): Chainable;
       login(): Chainable;
       requestGraphQl(operationName: string): Chainable;
+      customFormCommand({firstName,
+        lastName,
+        email,
+        number,
+        subject}): Chainable;
     }
   }
