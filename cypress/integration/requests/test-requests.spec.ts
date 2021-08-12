@@ -1,8 +1,6 @@
 /// <reference types="cypress" />
-import {
-    access_token,
-    newUserData
-} from '../../support/utils';
+
+import { access_token, newUserData } from 'support/utils';
 
 // https://gorest.co.in/
 

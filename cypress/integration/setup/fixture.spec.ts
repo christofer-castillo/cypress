@@ -2,7 +2,7 @@
 import {
     access_token,
     stringifiedNewUserData
-} from '../../support/utils';
+} from 'support/utils';
 
 describe('All things Fixtures', () => {
 

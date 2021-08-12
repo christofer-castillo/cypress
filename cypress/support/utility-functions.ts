@@ -1,4 +1,4 @@
-import { contactForm } from "../fixtures/form-filling";
+import { contactForm } from "fixtures/form-filling";
 
 /**
  * 

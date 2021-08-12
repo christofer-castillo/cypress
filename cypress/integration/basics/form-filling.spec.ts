@@ -1,5 +1,5 @@
-import { validInformation, invalidInformation, spacesFixture } from '../../fixtures/form-filling';
-import { fillOutContactForm } from '../../support/utility-functions';
+import { validInformation, invalidInformation, spacesFixture } from 'fixtures/form-filling';
+import { fillOutContactForm } from 'support/utility-functions';
 
 describe('Form Filling Command', () => {
     // make sure to run the `yarn server` command to start the server
