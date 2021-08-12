@@ -2,7 +2,12 @@
     "compilerOptions": {
       "target": "es6",
       "lib": ["es6", "dom"],
-      "types": ["cypress"]
+      "types": ["cypress"],
+      "baseUrl": ".",
+      "paths": {
+        "support/*": ["cypress/support/*"],
+        "fixtures/*": ["cypress/fixtures/*"]
+      }
     },
     "include": ["**/*.ts"]
   }

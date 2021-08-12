@@ -1,4 +1,4 @@
-import { cookie } from '../../fixtures/cookie';
+import { cookie } from 'fixtures/cookie';
 
 describe('All Other Cookies Commands', () => {
 

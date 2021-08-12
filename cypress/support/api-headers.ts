@@ -1,6 +1,6 @@
 import {
     access_token
-} from './utils';
+} from 'support/utils';
 
 export const getHeaders = (hasJsonBody = false) => {
     const headers = {

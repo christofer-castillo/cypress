@@ -2,7 +2,7 @@
 import {
     countryNames,
     queryTodos
-} from '../../support/graphql-queries';
+} from 'support/graphql-queries';
 
 describe('GraphQL Requests', () => {
 

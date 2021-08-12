@@ -10,7 +10,7 @@ declare namespace Cypress {
        * @param value string attached to data-cy = ''
        * @example cy.getDataTag('selector')
        */
-      getDataTag(value: string): Chainable<Element>;
+      getDataTag(value: string): Chainable;
       interceptGraphQl(opName: string): Chainable;
       getAndSetToken(): VoidFunction;
       saveLocalStorage(): Chainable;
