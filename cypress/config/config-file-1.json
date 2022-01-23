@@ -2,7 +2,8 @@
     "env": {
         "email": "randomemail2021@gmail.com",
         "password": "Password",
-        "url": "https://developer.mozilla.org/en-US/"
+        "url": "https://docs.cypress.io/guides/overview/why-cypress",
+        "searchTerm": "command line"
     },
     "video": false,
     "viewportHeight": 1080,
