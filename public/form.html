@@ -17,7 +17,7 @@
           resize: vertical;
         }
         
-        input[type=submit] {
+        input[type=submit], button {
           background-color: #04AA6D;
           color: white;
           padding: 12px 20px;
@@ -62,6 +62,7 @@
             <label for="subject">Subject</label>
             <textarea id="subject" name="subject" placeholder="Please input the subject" style="height:200px" data-cy="subject-area"></textarea>
             <input type="submit" value="Submit" data-cy="submit">
+            <button aria-label="some button" onclick="alert('Was found')">Aria button</button>
         </form>
         </div>
         <script src="form.js"></script>

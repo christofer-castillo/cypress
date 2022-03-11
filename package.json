@@ -10,6 +10,7 @@
     "server": "http-server"
   },
   "devDependencies": {
+    "@testing-library/cypress": "^8.0.2",
     "@types/node": "^16.4.10",
     "tsconfig-paths": "^3.10.1",
     "typescript": "^4.2.3"

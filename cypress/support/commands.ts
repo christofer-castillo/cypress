@@ -1,3 +1,9 @@
+import '@testing-library/cypress/add-commands';
+
+Cypress.Commands.add('configureCypressTestingLibrary', config => {
+    cy.configureCypressTestingLibrary(config)
+});
+
 Cypress.Commands.add('interceptGraphQl', opName => {
     cy.intercept('POST', 'insertURL', req => {
         const {
