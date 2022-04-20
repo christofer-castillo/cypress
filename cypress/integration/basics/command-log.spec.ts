@@ -1,5 +1,3 @@
-/// <reference types="cypress" />
-
 describe('Command Logging', () => {
 
     it('should display cy.log() information', () => {

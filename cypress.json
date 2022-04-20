@@ -1,10 +1,11 @@
 {
-    "env": {
-        "email": "randomemail2021@gmail.com",
-        "password": "Password",
-        "url": "https://developer.mozilla.org/en-US/"
+    "component": {
+      "componentFolder": "cypress/integration/components",
+      "testFiles": "**/*spec.{js,jsx,ts,tsx}"
     },
-    "video": false,
-    "viewportHeight": 1080,
-    "viewportWidth": 1980
-}
+  "env": {
+    "baseUrl": "http://localhost:3000/"
+  },
+  "pluginsFile": "cypress/plugins/index.ts",
+  "supportFile": "cypress/support/index.ts"
+  }
