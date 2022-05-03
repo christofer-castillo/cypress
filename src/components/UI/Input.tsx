@@ -9,7 +9,7 @@ const TodoInput = styled.input`
     margin: 8px 0;
     border-radius: 5px;
     border: 0;
-    min-width: 400px;
+    min-width: 600px;
 `;
 
 const Label = styled.label`

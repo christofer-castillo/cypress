@@ -66,7 +66,7 @@ function App() {
           <form onSubmit={handleSubmit}>
               <Input id='todo-id' dataTag='todo-id' maxlength={26} type={undefined} placeholder="Enter a new todo" labelText="Todo Input" value={todo} onChange={handleChange} />
           </form>
-          <div>Total Todos: {list.length}</div>
+          <h3>Total Todos: {list.length}</h3>
         </Container>
         <TodoList list={list} onRemove={handleRemove} />
       </div>

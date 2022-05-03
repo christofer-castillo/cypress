@@ -1,5 +1,3 @@
-/// <reference types="cypress" />
-
 const url = 'https://gorest.co.in/rest-console';
 
 describe('URL argument Examples', () => {
@@ -61,11 +59,6 @@ describe('routeMatcher Examples', () => {
             https: true
         }).as('https');
 
-        cy.intercept({
-            matchUrlAgainstPath: true,
-            url: 'https://gorest.co.in/public-api/users?page=2'
-        }).as('matchUrl');
-
         // path
         cy.intercept({
             path: '/public-api/users?page=2'
@@ -94,7 +87,6 @@ describe('routeMatcher Examples', () => {
         cy.wait('@headers');
         cy.wait('@hostname');
         cy.wait('@https');
-        cy.wait('@matchUrl');
         cy.wait('@path');
         cy.wait('@pathname');
         cy.wait('@querystring');

@@ -2,7 +2,7 @@
 
 describe('.then command', { baseUrl: 'https://swapi.dev/api' }, () => {
 
-    let coolestCharacter;
+    let coolestCharacter; // Darth Vader of course
     before(() => {
         cy.request({
             url: '/people',

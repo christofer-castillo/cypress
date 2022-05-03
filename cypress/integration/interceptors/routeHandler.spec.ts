@@ -1,8 +1,4 @@
-/// <reference types="cypress" />
-import {
-    access_token,
-    stringifiedNewUserData
-} from 'support/utils';
+import { access_token, stringifiedNewUserData } from 'support/utils';
 
 // Cy.Intercept arguments
 // cy.intercept(url, routeHandler?)
@@ -128,7 +124,7 @@ describe('Actual RouteHandler examples', () => {
         it('should intercept a response - StaticResponse object', () => {
             const staticResponseObject = {
                 // StaticResponse fields:
-                // fixture, body, headers, statusCode, forceNetworkError, delayMs, & throttleKbps
+                // fixture, body, headers, statusCode, forceNetworkError, setDelay, & throttleKbps
                 // Have to stringify body so API does not freak out and throw 200 parseerror
                 body: JSON.stringify('idk what to put here'),
                 headers: {
@@ -170,8 +166,8 @@ describe('Actual RouteHandler examples', () => {
         it('should intercept a response - delay & throttle', () => {
             cy.intercept('GET', interceptedUrl, req => {
                 req.reply(res => {
-                    res.delay(1000);
-                    res.throttle(10);
+                    res.setDelay(1000);
+                    res.setThrottle(10);
                 });
             }).as('fifth');
 

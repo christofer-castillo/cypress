@@ -1,8 +1,4 @@
-/// <reference types="cypress" />
-import {
-    access_token,
-    stringifiedNewUserData
-} from 'support/utils';
+import { access_token, stringifiedNewUserData } from 'support/utils';
 
 describe('All things Fixtures', () => {
 

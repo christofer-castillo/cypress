@@ -9,5 +9,6 @@
       "fixtures/*": ["cypress/fixtures/*"]
     }
   },
-  "include": ["**/*.ts", "./support"]
+  "include": ["**/*.ts"],
+  "exclude": ["@testing-library"]
 }

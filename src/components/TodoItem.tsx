@@ -10,7 +10,7 @@ const TodoItemContainer = styled.div`
     justify-content: space-between;
     background-color: dodgerblue;
     color: white;
-    width: 400px;
+    width: 600px;
     font-size: 20px;
     border-radius: 1px;
     border: 2px solid black;

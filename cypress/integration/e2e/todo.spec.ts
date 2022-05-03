@@ -14,6 +14,6 @@ describe('First Todo Test Suite', () => {
             .window()
             .then(() => {
                 expect(localStorage.getItem('todos')).to.exist;
-            })
+            });
     });
 });
