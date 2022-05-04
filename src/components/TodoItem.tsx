@@ -27,7 +27,7 @@ const TodoName = styled.div`
 
 interface Props {
     name: string;
-    onRemove: Function;
+    onRemove: (id: string) => void;
     id: string;
 }
 

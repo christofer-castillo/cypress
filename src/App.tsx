@@ -5,6 +5,7 @@ import { GlobalStyle } from "styles/global";
 import Input from 'components/UI/Input';
 import { v4 as uuidv4 } from 'uuid';
 import breakpoints from "styles/breakpoints";
+import { Link, Outlet } from "react-router-dom";
 
 const Container = styled.div`
     display: flex;
@@ -54,7 +55,7 @@ function App() {
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => setTodo(event.target.value);
 
-  const handleRemove = (id: string) => {
+  const handleRemove = (id: string): void => {
     const newList = list.filter((item) => item.id !== id);
     setList(newList);
   };
@@ -62,6 +63,7 @@ function App() {
   return (
       <div>
         <GlobalStyle />
+
         <Container>
           <form onSubmit={handleSubmit}>
               <Input id='todo-id' dataTag='todo-id' maxlength={26} type={undefined} placeholder="Enter a new todo" labelText="Todo Input" value={todo} onChange={handleChange} />

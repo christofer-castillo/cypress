@@ -1,7 +1,7 @@
 describe('Everything type in Cypress', () => {
 
     // Run the command: `yarn server` to start the local server to be able to view this
-    beforeEach(() => cy.visit('http://localhost:8080/'));
+    beforeEach(() => cy.visit('http://localhost:8080/form'));
 
     it('should type in a standard text input', () => {
         const text = 'random string of characters';

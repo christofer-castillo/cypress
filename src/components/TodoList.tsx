@@ -14,7 +14,7 @@ interface Props {
         id: string,
         todo: string
     }[];
-    onRemove: Function;
+    onRemove: (id: string) => void;
 }
 
 const TodoList = ({ list, onRemove }: Props) => {
