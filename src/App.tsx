@@ -5,7 +5,6 @@ import { GlobalStyle } from "styles/global";
 import Input from 'components/UI/Input';
 import { v4 as uuidv4 } from 'uuid';
 import breakpoints from "styles/breakpoints";
-import { Link, Outlet } from "react-router-dom";
 
 const Container = styled.div`
     display: flex;

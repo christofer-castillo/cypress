@@ -135,7 +135,7 @@ Cypress.Commands.add('customFormCommand', ({
         // @ts-ignore
         .type(number);
     // Subject
-    cy.getDataTag('subject-area')
+    cy.getDataTag('subject')
         .clear()
         .type(subject);
 });
