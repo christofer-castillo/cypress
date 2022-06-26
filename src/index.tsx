@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { ThemeProvider } from "styled-components";
 import { theme } from 'styles/theme';
 import Form from 'routes/Form';
+import Inputs from 'routes/Inputs';
 
 ReactDOM.render(
     <BrowserRouter>
@@ -13,6 +14,7 @@ ReactDOM.render(
               <Routes>
                   <Route path="/" element={<App/>} />
                   <Route path="/form" element={<Form />} />
+                  <Route path="/inputs" element={<Inputs />} />
               </Routes>
           </React.StrictMode>
         </ThemeProvider>

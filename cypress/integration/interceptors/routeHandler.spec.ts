@@ -6,17 +6,23 @@ import { access_token, stringifiedNewUserData } from 'support/utils';
 // cy.intercept(routeMatcher, routeHandler?)
 // routeHandler can be a string, object, StaticResponse object, or callback function
 
-describe('Actual RouteHandler examples', () => {
+
+// GoRest site has an ad blocking usage of page
+describe.skip('Actual RouteHandler examples', () => {
     beforeEach(() => cy.visit('https://gorest.co.in/rest-console'));
 
     const interceptedUrl = 'https://gorest.co.in/public-api/users';
 
     context('Intercepting Requests', () => {
 
+        beforeEach(() => cy.wait(2000));
+
         // Available functions on req - the name used here, can be whatever name you want
         // destroy, reply(interceptor | body | status), redirect
 
         it('should destroy the request before it is sent out', () => {
+            cy.wait(3000);
+            cy.get('body').click({ force: true });
             cy.get('#rsq_type').select('POST');
             cy.get('#rsq_header_value_0').clear().type(`Bearer ${access_token}`);
             cy.get('#rsq_body').type(stringifiedNewUserData);
@@ -176,7 +182,7 @@ describe('Actual RouteHandler examples', () => {
         });
     });
 
-    context.only('Miscellaneous items', () => {
+    context('Miscellaneous items', () => {
         it('should assert on a request', () => {
             cy.get('#rsq_type').select('POST');
             cy.get('#rsq_header_value_0').clear().type(`Bearer ${access_token}`);

@@ -1,5 +1,3 @@
-/// <reference types="cypress" />
-
 describe('.then command', { baseUrl: 'https://swapi.dev/api' }, () => {
 
     let coolestCharacter; // Darth Vader of course

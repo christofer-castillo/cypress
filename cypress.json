@@ -4,8 +4,10 @@
       "testFiles": "**/*spec.tsx"
     },
   "env": {
-    "baseUrl": "http://localhost:3000/"
+    "baseUrl": "http://localhost:3000/",
+    "url": "https://developer.mozilla.org/en-US/"
   },
   "pluginsFile": "cypress/plugins/index.ts",
-  "supportFile": "cypress/support/index.ts"
+  "supportFile": "cypress/support/index.ts",
+  "videos": false
   }

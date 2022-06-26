@@ -27,7 +27,7 @@ context('Cypress Viewport Options', () => {
         it('should set the viewport size', () => {
             cy.viewport('iphone-x');
 
-            cy.get('#hp-search-q').should('have.attr', 'required');
+            cy.get('#hp-search-input').should('have.attr', 'required');
         });
 
         it('should set the viewport size: ipad', () => {
