@@ -23,7 +23,7 @@ export const fillOutContactForm = ({ firstName, lastName, email, number, subject
         // @ts-ignore
         .type(number);
     // Subject
-    cy.getDataTag('subject-area')
+    cy.getDataTag('subject')
         .clear()
         .type(subject);
 };

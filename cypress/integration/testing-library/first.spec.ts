@@ -1,6 +1,6 @@
 describe('Testing Library Commands from ya boy Kent C. Dodds', () => {
     beforeEach(() => {
-        cy.visit('http://127.0.0.1:8080/form.html');
+        cy.visit('http://localhost:3000/form');
     });
 
     it('should test finding multiple inputs', () => {

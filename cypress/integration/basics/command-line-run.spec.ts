@@ -4,7 +4,9 @@ describe('Command Line - cypress run options', () => {
 
         cy.visit(Cypress.env('url'));
 
-        cy.get('.DocSearch').click();
+        cy.wait(3000);
+
+        cy.get('#top-nav-search-input').type('blah');
 
         cy.contains('blah').should('exist');
 

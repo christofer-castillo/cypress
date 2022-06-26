@@ -1,8 +1,7 @@
-/// <reference types="cypress" />
-
 const url = 'https://gorest.co.in/rest-console';
 
-describe('URL argument Examples', () => {
+// GoRest has an ad bar blocking interaction
+describe.skip('URL argument Examples', () => {
     beforeEach(() => cy.visit(url));
 
     it('should match based on substring', () => {
@@ -30,7 +29,7 @@ describe('URL argument Examples', () => {
     });
 });
 
-describe('routeMatcher Examples', () => {
+describe.skip('routeMatcher Examples', () => {
     beforeEach(() => cy.visit(url));
 
     it('should intercept the route with matching headers', () => {
@@ -61,11 +60,6 @@ describe('routeMatcher Examples', () => {
             https: true
         }).as('https');
 
-        cy.intercept({
-            matchUrlAgainstPath: true,
-            url: 'https://gorest.co.in/public-api/users?page=2'
-        }).as('matchUrl');
-
         // path
         cy.intercept({
             path: '/public-api/users?page=2'
@@ -94,7 +88,6 @@ describe('routeMatcher Examples', () => {
         cy.wait('@headers');
         cy.wait('@hostname');
         cy.wait('@https');
-        cy.wait('@matchUrl');
         cy.wait('@path');
         cy.wait('@pathname');
         cy.wait('@querystring');

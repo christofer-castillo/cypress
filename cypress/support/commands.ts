@@ -1,10 +1,12 @@
+/// <reference types="cypress" />
+/// <reference path="../support/index.d.ts" />
 import '@testing-library/cypress/add-commands';
 
-Cypress.Commands.add('configureCypressTestingLibrary', config => {
-    cy.configureCypressTestingLibrary(config)
+Cypress.Commands.add('configureCypressTestingLibrary', (config) => {
+    cy.configureCypressTestingLibrary(config);
 });
 
-Cypress.Commands.add('interceptGraphQl', opName => {
+Cypress.Commands.add('interceptGraphQl', (opName: string) => {
     cy.intercept('POST', 'insertURL', req => {
         const {
             operationName
@@ -104,7 +106,7 @@ Cypress.Commands.add('seedLocalStorage', (key, value) => {
     localStorage.setItem(key, value);
 });
 
-Cypress.Commands.add('getDataTag', value => {
+Cypress.Commands.add("getDataTag", (value: string) => {
     return cy.get(`[data-cy=${value}]`);
 });
 
@@ -133,7 +135,7 @@ Cypress.Commands.add('customFormCommand', ({
         // @ts-ignore
         .type(number);
     // Subject
-    cy.getDataTag('subject-area')
+    cy.getDataTag('subject')
         .clear()
         .type(subject);
 });

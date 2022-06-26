@@ -17,21 +17,21 @@ describe('All Other Cookies Commands', () => {
 
     it('should retrieve all cookies', () => {
         cy.getCookies().should(cookies => {
-            expect(cookies[1]).to.have.property('name', 'Chris Castillo');
-            expect(cookies[1]).to.have.property('value', '123456');
+            expect(cookies[0]).to.have.property('name', 'Chris Castillo');
+            expect(cookies[0]).to.have.property('value', '123456');
         });
     });
 
     it('should remove a specific cookie', () => {
-        cy.getCookies().should('have.length', 2).then(cookie => {
-            cy.clearCookie(cookie[1].name); // Chris Castillo
+        cy.getCookies().should('have.length', 1).then(cookie => {
+            cy.clearCookie(cookie[0].name); // Chris Castillo
         });
 
-        cy.getCookies().should('have.length', 1);
+        cy.getCookies().should('have.length', 0);
     });
 
     it('should remove all cookies', () => {
-        cy.getCookies().should('have.length', 2);
+        cy.getCookies().should('have.length', 1);
 
         cy.clearCookies();
 

@@ -1,8 +1,4 @@
-/// <reference types="cypress" />
-import {
-    access_token,
-    stringifiedNewUserData
-} from 'support/utils';
+import { access_token, stringifiedNewUserData } from 'support/utils';
 
 // Cy.Intercept arguments
 // cy.intercept(url, routeHandler?)
@@ -10,17 +6,23 @@ import {
 // cy.intercept(routeMatcher, routeHandler?)
 // routeHandler can be a string, object, StaticResponse object, or callback function
 
-describe('Actual RouteHandler examples', () => {
+
+// GoRest site has an ad blocking usage of page
+describe.skip('Actual RouteHandler examples', () => {
     beforeEach(() => cy.visit('https://gorest.co.in/rest-console'));
 
     const interceptedUrl = 'https://gorest.co.in/public-api/users';
 
     context('Intercepting Requests', () => {
 
+        beforeEach(() => cy.wait(2000));
+
         // Available functions on req - the name used here, can be whatever name you want
         // destroy, reply(interceptor | body | status), redirect
 
         it('should destroy the request before it is sent out', () => {
+            cy.wait(3000);
+            cy.get('body').click({ force: true });
             cy.get('#rsq_type').select('POST');
             cy.get('#rsq_header_value_0').clear().type(`Bearer ${access_token}`);
             cy.get('#rsq_body').type(stringifiedNewUserData);
@@ -128,7 +130,7 @@ describe('Actual RouteHandler examples', () => {
         it('should intercept a response - StaticResponse object', () => {
             const staticResponseObject = {
                 // StaticResponse fields:
-                // fixture, body, headers, statusCode, forceNetworkError, delayMs, & throttleKbps
+                // fixture, body, headers, statusCode, forceNetworkError, setDelay, & throttleKbps
                 // Have to stringify body so API does not freak out and throw 200 parseerror
                 body: JSON.stringify('idk what to put here'),
                 headers: {
@@ -170,8 +172,8 @@ describe('Actual RouteHandler examples', () => {
         it('should intercept a response - delay & throttle', () => {
             cy.intercept('GET', interceptedUrl, req => {
                 req.reply(res => {
-                    res.delay(1000);
-                    res.throttle(10);
+                    res.setDelay(1000);
+                    res.setThrottle(10);
                 });
             }).as('fifth');
 
@@ -180,7 +182,7 @@ describe('Actual RouteHandler examples', () => {
         });
     });
 
-    context.only('Miscellaneous items', () => {
+    context('Miscellaneous items', () => {
         it('should assert on a request', () => {
             cy.get('#rsq_type').select('POST');
             cy.get('#rsq_header_value_0').clear().type(`Bearer ${access_token}`);

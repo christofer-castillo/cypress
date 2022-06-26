@@ -1,10 +1,5 @@
-/// <reference types="cypress" />
-import {
-    newUserData
-} from 'support/utils';
-import {
-    getHeaders
-} from 'support/api-headers';
+import { newUserData } from 'support/utils';
+import { getHeaders } from 'support/api-headers';
 
 // https://gorest.co.in/
 

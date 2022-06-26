@@ -1,8 +1,4 @@
-/// <reference types="cypress" />
-import {
-    countryNames,
-    queryTodos
-} from 'support/graphql-queries';
+import { countryNames, queryTodos } from 'support/graphql-queries';
 
 describe('GraphQL Requests', () => {
 

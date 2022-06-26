@@ -1,7 +1,7 @@
 describe('Everything type in Cypress', () => {
 
-    // Run the command: `yarn server` to start the local server to be able to view this
-    beforeEach(() => cy.visit('http://localhost:8080/'));
+    // Run the command: `yarn start` to start the local server to be able to view this
+    beforeEach(() => cy.visit('http://localhost:3000/inputs'));
 
     it('should type in a standard text input', () => {
         const text = 'random string of characters';
@@ -43,13 +43,5 @@ describe('Everything type in Cypress', () => {
 
     it('should type into a contenteditable field', () => {
         cy.get('[contenteditable]').clear().type('something');
-    });
-
-    it('should type into the entire body', () => {
-        const stub = cy.stub();
-        cy.on('window:alert', stub);
-        cy.get('body').type('{downarrow}').then(() => {
-            expect(stub.getCall(0)).to.be.calledWith('Key Pressed: ArrowDown');
-        });
     });
 });

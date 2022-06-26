@@ -2,8 +2,8 @@ import { validInformation, invalidInformation, spacesFixture } from 'fixtures/fo
 import { fillOutContactForm } from 'support/utility-functions';
 
 describe('Form Filling Command', () => {
-    // make sure to run the `yarn server` command to start the server
-    beforeEach(() => cy.visit('http://localhost:8080/form.html'));
+    // make sure to run the `yarn start` command to start the server
+    beforeEach(() => cy.visit('http://localhost:3000/form'));
 
     it('should type with valid inputs', () => {
         fillOutContactForm(validInformation);

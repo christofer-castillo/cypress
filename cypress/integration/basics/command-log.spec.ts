@@ -1,5 +1,3 @@
-/// <reference types="cypress" />
-
 describe('Command Logging', () => {
 
     it('should display cy.log() information', () => {
@@ -7,8 +5,7 @@ describe('Command Logging', () => {
 
         cy.visit('https://example.cypress.io/commands/actions');
 
-        // @ts-ignore
-        cy.log('Cypress information', window.Cypress);
+        cy.log('Cypress information', window);
     });
 
     it('should display Cypress.log() information', () => {
@@ -18,7 +15,7 @@ describe('Command Logging', () => {
             cy.log(localStorage.getItem('Las Vegas'));
         });
         cy.log(localStorage.getItem('Las Vegas'));
-        // @ts-ignore
-        cy.log(Math.floor(Math.random() * 10));
+
+        cy.log(`${Math.floor(Math.random() * 10)}`);
     });
 });
