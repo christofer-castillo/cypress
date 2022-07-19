@@ -20,7 +20,7 @@ Cypress.Commands.add('interceptGraphQl', (opName: string) => {
 
 Cypress.Commands.add('requestGraphQl', operationName => {
     cy.request({
-        url: '/',
+        url: 'https://beta.pokeapi.co/graphql/v1beta',
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
