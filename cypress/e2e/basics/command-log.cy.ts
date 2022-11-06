@@ -12,9 +12,10 @@ describe('Command Logging', () => {
         cy.visit('https://example.cypress.io/commands/local-storage');
         cy.contains('Populate Local Storage').click();
         cy.seedLocalStorage('Las Vegas', 'Raiders').then(() => {
-            cy.log(localStorage.getItem('Las Vegas'));
+            cy.log(`LocalStorage: ${localStorage.getItem('Las Vegas')}`);
         });
-        cy.log(localStorage.getItem('Las Vegas'));
+        
+        cy.log(`LocalStorage: ${localStorage.getItem('Las Vegas')}`);
 
         cy.log(`${Math.floor(Math.random() * 10)}`);
     });

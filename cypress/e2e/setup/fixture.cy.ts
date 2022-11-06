@@ -1,5 +1,17 @@
 import { access_token, stringifiedNewUserData } from 'support/utils';
 
+interface TestData {
+    username: string;
+    password: string;
+    random: string;
+}
+
+const testData: TestData = {
+    username: "chris",
+    password: "super secret password",
+    random: "random string"
+}
+
 describe('All things Fixtures', () => {
 
     const requestUrl = 'https://gorest.co.in/public-api/users';
@@ -65,7 +77,7 @@ describe('Fixtures and the this keyword', () => {
     // has to be a normal function - not an arrow function due to the this context
     before(function () {
         cy.visit('https://gorest.co.in/rest-console');
-        cy.fixture('test-data.json').then(data => {
+        cy.fixture('test-data.ts').then(data => {
             this.data = data;
         });
     });
@@ -80,10 +92,11 @@ describe('Fixtures and the this keyword', () => {
 
 describe('Fixtures and closure variables', () => {
     // using a closure variable
-    let testData;
+    let testData: TestData;
+
     before(() => {
         cy.visit('https://gorest.co.in/rest-console');
-        cy.fixture('test-data.json').then(data => {
+        cy.fixture('test-data.ts').then(data => {
             testData = data;
         });
     });
@@ -95,8 +108,6 @@ describe('Fixtures and closure variables', () => {
     });
 });
 
-// @ts-ignore
-import * as testData from '../../fixtures/test-data.json';
 describe('Fixtures and imports', () => {
     before(() => cy.visit('https://gorest.co.in/rest-console'));
 
@@ -117,7 +128,7 @@ describe('Fixtures and declaring aliases', () => {
 
     it('should load fixture data and declare an alias', () => {
         // retrieve the fixures and do what needs to be done
-        cy.get('@yes').then(json => {
+        cy.get('@yes').then((json: any) => {
             cy.get('#rsq_header_value_0').clear().type(json.data[0].name);
         });
     });

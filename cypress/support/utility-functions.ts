@@ -1,4 +1,4 @@
-import { contactForm } from "fixtures/form-filling";
+import { contactForm } from "../fixtures/form-filling";
 
 /**
  * 
@@ -20,7 +20,6 @@ export const fillOutContactForm = ({ firstName, lastName, email, number, subject
     // Number
     cy.getDataTag('number')
         .clear()
-        // @ts-ignore
         .type(number);
     // Subject
     cy.getDataTag('subject')

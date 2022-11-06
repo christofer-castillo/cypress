@@ -1,10 +1,6 @@
-/// <reference types="cypress" />
-import {
-    newUserData
-} from 'support/utils';
-import {
-    getHeaders
-} from 'support/api-headers';
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import { newUserData } from 'support/utils';
+import { getHeaders } from 'support/api-headers';
 
 describe('Negative Testing APIs', {
     baseUrl: 'https://gorest.co.in/public-api'
@@ -32,8 +28,12 @@ describe('Negative Testing APIs', {
                 data
             } = response.body;
             expect(code).to.eq(422);
-            data.forEach(i => {
-                expect(i.message).to.be.eq("can't be blank");
+            data.forEach((i: any) => {
+                if (i.field === 'gender') {
+                    expect(i.message).to.be.eq("can't be blank, can be male of female");
+                } else {
+                    expect(i.message).to.be.eq("can't be blank");
+                }
             });
         });
     });
@@ -52,8 +52,12 @@ describe('Negative Testing APIs', {
                 data
             } = response.body;
             expect(code).to.eq(422);
-            data.forEach(i => {
-                expect(i.message).to.be.eq("can't be blank");
+            data.forEach((i: any) => {
+                if (i.field === 'gender') {
+                    expect(i.message).to.be.eq("can't be blank, can be male of female");
+                } else {
+                    expect(i.message).to.be.eq("can't be blank");
+                }
             });
         });
     });

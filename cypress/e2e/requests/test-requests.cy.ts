@@ -1,13 +1,8 @@
-/// <reference types="cypress" />
-
 import { access_token, newUserData } from 'support/utils';
 
-// https://gorest.co.in/
-
-describe('Cy.Request() Part Two', {
-    baseUrl: 'https://gorest.co.in/public-api'
-}, () => {
-    let userId;
+describe('Cy.Request() Part Two',
+{ baseUrl: 'https://gorest.co.in/public-api' }, () => {
+    let userId: string;
 
     it('Should create a user -- auth in header', () => {
         cy.request({

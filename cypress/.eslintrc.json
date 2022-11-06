@@ -7,12 +7,19 @@
   },
   "overrides": [
     {
-      "files": ["*.spec.ts"],
+      "files": ["*.cy.ts", "**/*.ts", "**/.cy.tsx", "**/**/*.cy.tsx"],
       "rules": {
         "jest/expect-expect": "off",
         "jest/valid-expect-in-promise": "off",
         "jest/valid-expect": "off",
-        "jest/valid-describe-callback": "off"
+        "jest/valid-describe-callback": "off",
+        "@typescript-eslint/prefer-namespace-keyword": "error",
+        "@typescript-eslint/no-namespace": "off",
+        "no-unused-expressions": 0,
+        "@typescript-eslint/triple-slash-reference": "error",
+        "jest/no-disabled-tests": "off",
+        "jest/no-conditional-expect": "off",
+        "jest/no-focused-tests": "off"
       }
     }
   ]

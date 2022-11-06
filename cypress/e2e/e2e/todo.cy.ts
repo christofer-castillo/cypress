@@ -1,5 +1,5 @@
 describe('First Todo Test Suite', () => {
-    beforeEach(() => cy.visit(Cypress.env('baseUrl')));
+    beforeEach(() => cy.visit('http://localhost:3000'));
 
     it('should do something', () => {
         cy.contains('Todo Input').should('be.visible');

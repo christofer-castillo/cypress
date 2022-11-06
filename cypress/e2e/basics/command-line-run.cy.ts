@@ -9,7 +9,6 @@ describe('Command Line - cypress run options', () => {
         cy.get('#top-nav-search-input').type('blah');
 
         cy.contains('blah').should('exist');
-
     });
 
 });

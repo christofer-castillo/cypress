@@ -6,7 +6,6 @@ import { access_token, stringifiedNewUserData } from 'support/utils';
 // cy.intercept(routeMatcher, routeHandler?)
 // routeHandler can be a string, object, StaticResponse object, or callback function
 
-
 // GoRest site has an ad blocking usage of page
 describe.skip('Actual RouteHandler examples', () => {
     beforeEach(() => cy.visit('https://gorest.co.in/rest-console'));
