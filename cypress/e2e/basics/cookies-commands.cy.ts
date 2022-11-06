@@ -10,8 +10,8 @@ describe('All Other Cookies Commands', () => {
     it('should retrieve a specific cookie', () => {
         // cy.getCookie('Chris Castillo');
         cy.getCookie(cookie.name).should(cookie => {
-            expect(cookie.name).to.be.eq('Chris Castillo');
-            expect(cookie.value).to.be.eq('123456');
+            expect(cookie?.name).to.be.eq('Chris Castillo');
+            expect(cookie?.value).to.be.eq('123456');
         });
     });
 

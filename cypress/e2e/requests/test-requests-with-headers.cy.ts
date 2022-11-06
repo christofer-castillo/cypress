@@ -3,10 +3,9 @@ import { getHeaders } from 'support/api-headers';
 
 // https://gorest.co.in/
 
-describe('Using api header command', {
-    baseUrl: 'https://gorest.co.in/public-api'
-}, () => {
-    let userId;
+describe('Using api header command',
+    { baseUrl: 'https://gorest.co.in/public-api' }, () => {
+    let userId: string;
 
     it('Should create a user -- auth in header', () => {
         cy.request({
@@ -19,11 +18,12 @@ describe('Using api header command', {
         });
     });
 
-    it('Should create a new post for the created user', () => {
+    it.only('Should create a new post for the created user', () => {
         const newBody = {
             title: 'Super creative title',
             body: 'Random jibberish'
         };
+        
         cy.log('POST /users/created-user/new-post');
         cy.request({
             method: 'POST',

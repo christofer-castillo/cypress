@@ -2,7 +2,7 @@
 export const access_token = '2fab1702bac9e1e9114c7039866c58dbbecd445df0eeeacae3f816ddf09cdf8f';
 
 export const newUserData = {
-    email: 'fakeEmail14@gmail.com',
+    email: 'fakeEmail20@gmail.com',
     name: 'Billy Bob',
     gender: 'Male',
     status: 'Active'

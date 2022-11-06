@@ -1,5 +1,5 @@
+/* eslint-disable @typescript-eslint/triple-slash-reference */
 /// <reference types="cypress" />
-/// <reference path="../support/index.d.ts" />
 import '@testing-library/cypress/add-commands';
 
 Cypress.Commands.add('configureCypressTestingLibrary', (config) => {
@@ -32,13 +32,15 @@ Cypress.Commands.add('requestGraphQl', operationName => {
     });
 });
 
-let LOCAL_STORAGE = {};
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const LOCAL_STORAGE = {} as any;
 
 Cypress.Commands.add('saveLocalStorage', () => {
     Cypress.log({
         message: 'Grabbing local storage and saving to variable.',
         displayName: 'SaveLocal'
     });
+    
     Object.keys(localStorage).forEach(key => {
         LOCAL_STORAGE[key] = localStorage[key];
     });
@@ -49,6 +51,7 @@ Cypress.Commands.add('restoreLocalStorage', () => {
         message: 'Grabbing local storage variable and setting.',
         displayName: 'SetLocal'
     });
+
     Object.keys(LOCAL_STORAGE).forEach(key => {
         localStorage.setItem(key, LOCAL_STORAGE[key]);
     });
@@ -110,13 +113,21 @@ Cypress.Commands.add("getDataTag", (value: string) => {
     return cy.get(`[data-cy=${value}]`);
 });
 
+export interface CustomForm {
+    firstName: string;
+    lastName: string;
+    email: string;
+    number: string;
+    subject: string;
+}
+
 Cypress.Commands.add('customFormCommand', ({
     firstName,
     lastName,
     email,
     number,
     subject
-}) => {
+}: CustomForm ) => {
     // First Name
     cy.getDataTag('first-name')
         .clear()
@@ -132,7 +143,6 @@ Cypress.Commands.add('customFormCommand', ({
     // Number
     cy.getDataTag('number')
         .clear()
-        // @ts-ignore
         .type(number);
     // Subject
     cy.getDataTag('subject')
