@@ -6,6 +6,7 @@ import { ThemeProvider } from "styled-components";
 import { theme } from 'styles/theme';
 import Form from 'routes/Form';
 import Inputs from 'routes/Inputs';
+import Checkboxes from 'routes/Checkboxes';
 
 ReactDOM.render(
     <BrowserRouter>
@@ -15,6 +16,7 @@ ReactDOM.render(
                   <Route path="/" element={<App/>} />
                   <Route path="/form" element={<Form />} />
                   <Route path="/inputs" element={<Inputs />} />
+                  <Route path="/checkboxes" element={<Checkboxes />} />
               </Routes>
           </React.StrictMode>
         </ThemeProvider>
