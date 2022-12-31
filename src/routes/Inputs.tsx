@@ -1,4 +1,3 @@
-import * as React from 'react';
 import { useEffect } from "react";
 
 const Inputs = () => {
@@ -7,7 +6,7 @@ const Inputs = () => {
     }
 
     const handleButtonClick = () => {
-        if(document.cookie.split(';').some(item => item.trim().startsWith('Las Vegas'))) {
+        if (document.cookie.split(';').some(item => item.trim().startsWith('Las Vegas'))) {
             alert('Cookie exists');
         } else {
             document.cookie = cookieGenerator('Las Vegas', 'Raiders');
@@ -16,7 +15,7 @@ const Inputs = () => {
     };
 
     useEffect(() => {
-        const handleKeyDown = (e: any) => alert(`Key Pressed: ${e.key}`);
+        const handleKeyDown = (e: KeyboardEvent) => alert(`Key Pressed: ${e.key}`);
         window.addEventListener('keydown', handleKeyDown);
 
         return () => {

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import React, { useEffect } from 'react';
 import TodoList from 'components/TodoList';
 import styled from "styled-components";
@@ -22,7 +23,7 @@ const Container = styled.div`
 
 function App() {
   const [todo, setTodo] = React.useState('');
-  const [list, setList] = React.useState<{ id: string, todo: string }[]>(() => {
+  const [list, setList] = React.useState<{ id: string, name: string }[]>(() => {
       // grabbing 'todos' from localstorage
       const savedTodos = localStorage.getItem('todos');
 
@@ -47,9 +48,8 @@ function App() {
           return;
       }
 
-      setList((prevState => [{ todo, id: uuidv4() }, ...prevState]));
+      setList((prevState => [{ name: todo, id: uuidv4() }, ...prevState]));
       setTodo('');
-
   };
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => setTodo(event.target.value);
@@ -62,7 +62,6 @@ function App() {
   return (
       <div>
         <GlobalStyle />
-
         <Container>
           <form onSubmit={handleSubmit}>
               <Input id='todo-id' dataTag='todo-id' maxlength={26} type={undefined} placeholder="Enter a new todo" labelText="Todo Input" value={todo} onChange={handleChange} />

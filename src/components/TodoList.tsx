@@ -9,11 +9,13 @@ const StyledTodoList = styled.div`
     justify-content: center;
 `;
 
+interface ListItem {
+    id: string;
+    name: string;
+}
+
 interface Props {
-    list: {
-        id: string,
-        todo: string
-    }[];
+    list: ListItem[];
     onRemove: (id: string) => void;
 }
 
@@ -21,11 +23,7 @@ const TodoList = ({ list, onRemove }: Props) => {
 
     return (
         <StyledTodoList>
-            {
-                list.map(({ id, todo }) => (
-                    <TodoItem name={todo} onRemove={onRemove} key={id} id={id} />
-                ))
-            }
+            {list.map(({ id, name }) => <TodoItem name={name} onRemove={onRemove} key={id} id={id} />)}
         </StyledTodoList>
     )
 };

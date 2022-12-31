@@ -22,7 +22,6 @@ const Form = () => {
 
     const handleSubmit = (e: React.SyntheticEvent) => {
         e.preventDefault();
-        // console.log(e);
 
         if (!firstName || firstName.trim() === '') {
             setFirstNameError(true);
