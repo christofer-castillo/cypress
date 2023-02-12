@@ -30,11 +30,11 @@ interface Props {
     maxlength: number;
 }
 
-const Input = ({ id, dataTag, placeholder, type, labelText, value, onChange, maxlength }: Props) => {
+const Input = ({ id, dataTag, placeholder, type = 'text', labelText, value, onChange, maxlength }: Props) => {
     return (
         <>
             <Label htmlFor={id}>{labelText}</Label>
-            <TodoInput id={id} data-test={dataTag} placeholder={placeholder} type={type || 'text'} value={value} onChange={onChange} maxLength={maxlength} />
+            <TodoInput id={id} data-test={dataTag} placeholder={placeholder} type={type} value={value} onChange={onChange} maxLength={maxlength} />
         </>
     );
 };
