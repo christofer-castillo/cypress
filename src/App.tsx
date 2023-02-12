@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import React, { useEffect } from 'react';
 import TodoList from 'components/TodoList';
 import styled from "styled-components";
@@ -21,9 +20,14 @@ const Container = styled.div`
     }
 `;
 
+interface ListItem {
+  id: string;
+  name: string;
+}
+
 function App() {
   const [todo, setTodo] = React.useState('');
-  const [list, setList] = React.useState<{ id: string, name: string }[]>(() => {
+  const [list, setList] = React.useState<ListItem[]>(() => {
       // grabbing 'todos' from localstorage
       const savedTodos = localStorage.getItem('todos');
 
